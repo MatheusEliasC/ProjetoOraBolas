@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <link href="stylesheet.css" type="text/css">
+    <meta charset="UTF-8">
+    <script src="Chart.js"></script>
+    <title>Projeto Ora Bolas</title>
+</head>
+<body>
+    <div class="titulo">
+        <h2>Projeto Ora Bolas - Turma de Orientação</h2>
+
+        <h3>Matheus Elias Cruz</h3>
+        <br>
+    </div>
+        <div class="parametros">
+            <h3>Parâmetros do código:</h3>
+            <table width="50%">
+                <tr>
+                    <td><p>Velocidade Máxima: 2,3 m/s</p></td>
+                    <td><p>Raio de interceptação: X</p></td>
+                </tr>
+                <tr>
+                    <td><p>Aceleração: 4 m/s²</p></td>
+                    <td><p>Desaceleração : 2,6 m/s²</p></td>
+                </tr>
+                <tr>
+                    <td><p>Tempo de Aceleração: X s</p></td>
+                    <td><p>Tempo de Desaceleração: X s</p></td>
+                </tr>
+                <form id="pos" action="/index.js">
+                <tr>
+                    <td> Posição X do Robô: <input type="text" name="roboX"></td>
+                    <td> Posição Y do Robô: <input type="text" name="roboY"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" onclick="recebeRobo()" value="Enviar">
+                </form>
+        </div>
+        <div>
+            <br>
+            <br>
+            <canvas id="bubble-chart" width="80%" height="35"></canvas>
+    <br>
+    <br>
+    
+        </div>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
