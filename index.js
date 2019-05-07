@@ -1144,6 +1144,6 @@ var length = distances.length;
         }        
     }
 
-for(i=0;i<distances;i++){
+for(i=0;i<length;i++){
   console.log(distances[i]);
 }
