@@ -20,17 +20,7 @@ var length = distances.length;
         }        
     }
 
-var label = "Interceptação";
 
-          backgroundColor: "rgba(193,46,12,0.2)",
-          borderColor: "rgba(193,46,12,1)",
-          data: [{
-            x: roboX,
-            y: roboY,
-          }]
-
-
-myChart.data.labels.push(label);
 
   }
 
