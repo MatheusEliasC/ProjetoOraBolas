@@ -2,7 +2,37 @@ function recebeRobo() {
     myChart.data.datasets[1].data[0].x = document.querySelector("#roboX").value;
     myChart.data.datasets[1].data[0].y = document.querySelector("#roboY").value;
     myChart.update();
+    var distances = [];
+for(i=0;i<bolaX.length;i++){
+  distances[i] = Math.sqrt(Math.pow((bolaX[i] - roboX), 2) + Math.pow((bolaY[i] - roboY), 2));
 }
+
+var length = distances.length;
+    //Number of passes
+    for (i = 0; i < length; i++) { 
+        //Notice that j < (length - i)
+        for (j = 0; j < length; j++) { 
+            //Compare the adjacent positions
+            if(distances[j] < distances[i]) {
+                //Swap the numbers
+                var tmp = j;  //Temporary variable to hold the current number
+            }
+        }        
+    }
+
+var label = "Interceptação";
+
+          backgroundColor: "rgba(193,46,12,0.2)",
+          borderColor: "rgba(193,46,12,1)",
+          data: [{
+            x: roboX,
+            y: roboY,
+          }]
+
+
+myChart.data.labels.push(label);
+
+  }
 
 
 var i;
@@ -11,7 +41,7 @@ var i;
     var myChart = new Chart(document.getElementById("bubble-chart"), {
     type: 'scatter',
     data: {
-      labels: "Africa",
+      labels: "OraBolas",
       datasets: [
         {
           label: ["Bola"],
@@ -1124,26 +1154,4 @@ var i;
       }
     }
 });
-var distances = [];
-for(i=0;i<bolaX.length;i++){
-  distances[i] = Math.sqrt(Math.pow((bolaX[i] - roboX), 2) + Math.pow((bolaY[i] - roboY), 2));
-}
 
-var length = distances.length;
-    //Number of passes
-    for (var i = 0; i < length; i++) { 
-        //Notice that j < (length - i)
-        for (var j = 0; j < (length - i - 1); j++) { 
-            //Compare the adjacent positions
-            if(distances[j] > distances[j+1]) {
-                //Swap the numbers
-                var tmp = distances[j];  //Temporary variable to hold the current number
-                distances[j] = distances[j+1]; //Replace current number with adjacent number
-                distances[j+1] = tmp; //Replace adjacent number with current number
-            }
-        }        
-    }
-
-for(i=0;i<length;i++){
-  console.log(distances[i]);
-}
